@@ -6,7 +6,7 @@ VERSION = 7.9.0
 all: build
 
 build:
-	docker build -t $(NAME):$(VERSION) .
+	docker build -t $(NAME):$(VERSION) --pull=true .
 
 tag_latest:
 	docker tag -f $(NAME):$(VERSION) $(NAME):latest
@@ -19,6 +19,7 @@ release: tag_latest
 run:
 	docker run \
 		-d \
+		--net=host \
 		-p 3483:3483 \
 		-p 9000:9000 \
 		-p 9090:9090 \
