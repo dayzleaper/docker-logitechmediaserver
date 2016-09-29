@@ -3,7 +3,7 @@ FROM debian:8
 MAINTAINER Robert Frånlund <robert.franlund@poweruser.se>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CURRENT_VERSION logitechmediaserver_7.9.0~1464511112_all.deb
+ENV CURRENT_VERSION logitechmediaserver_7.9.0~1475037234_all.deb
 
 # Update system and install dependencies
 RUN apt-get update && \
