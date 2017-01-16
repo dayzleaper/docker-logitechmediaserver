@@ -8,5 +8,5 @@ docker run -d \
 	-p 9000 \
 	-p 9090 \
 	-v <data_dir>:/config \
-	dayzleaper/logitechmediaserver:latest
+	rfranlund/docker-logitechmediaserver:latest
 ```
