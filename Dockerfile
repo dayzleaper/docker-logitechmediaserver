@@ -3,11 +3,11 @@ FROM debian:8
 MAINTAINER Robert Frånlund <robert.franlund@poweruser.se>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CURRENT_VERSION 2017-06-05
+ENV CURRENT_VERSION 2018-01-21
 
 # Update system and install dependencies
 RUN apt-get update && \
-  apt-get -y install wget perl supervisor
+  apt-get -y install wget perl supervisor curl
 
 # Fetch and install Logitech Media Server
 RUN wget -O /tmp/logitechmediaserver.deb \
