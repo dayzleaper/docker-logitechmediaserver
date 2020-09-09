@@ -3,7 +3,7 @@ FROM debian:9
 MAINTAINER Robert Frånlund <robert.franlund@poweruser.se>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV CURRENT_VERSION 2019-03-23
+ENV CURRENT_VERSION 2020-09-09
 
 # Update system and install dependencies
 RUN apt-get update && \
@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # Fetch and install Logitech Media Server
 RUN wget -O /tmp/logitechmediaserver.deb \
-    $(wget -q -O - "http://www.mysqueezebox.com/update/?version=7.9.0&revision=1&geturl=1&os=deb") && \
+    $(wget -q -O - "http://www.mysqueezebox.com/update/?version=7.9.3&revision=1&geturl=1&os=deb") && \
   dpkg --install /tmp/logitechmediaserver.deb
 
 # File system fixes
